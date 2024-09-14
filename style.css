@@ -1,0 +1,77 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: #2c3e50;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  color: #3498db;
+}
+
+textarea, input[type="text"] {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  margin-right: 10px;
+  padding: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Profile picture styling */
+.profile-pic-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #3498db;
+}
+
+/* Dark mode toggle */
+.dark-mode-toggle {
+  margin-top: 20px;
+}
+
+body.dark-mode {
+  background-color: #2c3e50;
+  color: white;
+}
+
+body.dark-mode .container {
+  background-color: #34495e;
+}
+
+body.dark-mode h1, body.dark-mode h2, body.dark-mode button {
+  color: #ecf0f1;
+}

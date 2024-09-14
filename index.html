@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body onload="loadPortfolio()">
+    <div class="container">
+        <h1>My Portfolio</h1>
+
+        <!-- Name Input -->
+        <section>
+            <label for="name-input">Your Name:</label>
+            <input type="text" id="name-input" placeholder="Enter your name" />
+        </section>
+
+        <!-- Profile Picture Section -->
+        <section class="profile-section">
+            <h2>Profile Picture</h2>
+            <input type="file" id="profile-pic-upload" accept=".jpg,.jpeg">
+            <button onclick="uploadProfilePic()">Upload Profile Picture</button>
+            <div class="profile-pic-wrapper">
+                <img id="profile-pic" alt="Profile Picture" class="profile-pic" />
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section>
+            <textarea id="about-me-text" placeholder="Type about yourself..."></textarea>
+        </section>
+
+        <!-- Skills Section -->
+        <section>
+            <h2>Skills</h2>
+            <textarea id="skills-text" placeholder="Type your skills..."></textarea>
+        </section>
+
+        <!-- Achievements Section -->
+        <section>
+            <h2>Achievements</h2>
+            <textarea id="achievements-text" placeholder="List your achievements..."></textarea>
+        </section>
+
+        <!-- Contact Section -->
+        <section>
+            <h2>Contact</h2>
+            <textarea id="contact-text" placeholder="Type your contact details..."></textarea>
+        </section>
+
+        <!-- Education Section -->
+        <section>
+            <h2>Education</h2>
+            <textarea id="education-text" placeholder="Type your education details..."></textarea>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section>
+            <h2>Work Experience</h2>
+            <textarea id="work-experience-text" placeholder="Type your work experience details..."></textarea>
+        </section>
+
+        <!-- Buttons to Save All Details and Download Resume -->
+        <button onclick="savePortfolio()">Save Portfolio</button>
+        <button onclick="generateResume()">Download Resume as PDF</button>
+
+        <!-- Dark Mode Toggle -->
+        <div class="dark-mode-toggle">
+            <label for="theme-switch">Dark Mode:</label>
+            <input type="checkbox" id="theme-switch" onclick="toggleDarkMode()" />
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
